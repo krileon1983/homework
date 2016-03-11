@@ -1,49 +1,134 @@
-  <!DOCTYPE html>
-  <html>
-  <head>
-  <meta charset="utf-8">
-  <link  href="style.css" rel="stylesheet" type="text/css">
-  <meta name="description" content="about Leonid Kriukovskoi">
-  <title>Leonid Kriukovskoi</title>
-  </head>
-  <body>
-  <div id="content"><!--Вся страница-->
-  <header></header><!--Шапка сайта -->
-  <!-- Горизонтальный блок с меню и поиском -->
-  <div id="top"> 
-  <!--Верхнее меню -->
- <div id="topmenu"> <ul>
-<li class="active"><a href="index.html">Главная</a></li>
-<li><a href="#">Новости</a></li>
-<li><a href="#">Бизнес</a></li>
-<li><a href="currency.html">Курсы валют</a></li>
-</ul></div>
-<!-- Конец верхнего меню -->
-<!--Форма поиска -->
-<form action="#" name="search"><input type="search" placeholder="Поиск"><button type="submit"><img src="images/search.jpg"></button>
-</form>
-<!--Конец формы поиска-->
-</div>
-  <!--Конец верхнего меню с поиском -->
-  <!--Левое меню -->
- <div id="leftmenu">
- <ul><li><a href="information.html">Обо мне</a></li>
-  <li><a href="#">Образование</a></li> 
-   <li><a href="#">Опыт работы</a></li> 
-    <li><a href="#">Навыки</a></li> 
-	 <li><a href="contact.html">Контакты</a></li> 
-   </ul>
-</div>  
-<!--конец левого меню -->
-<!--Основной контент -->
-<article>
-<iframe src="information.html"></iframe>
-<iframe src="contact.html"></iframe>
-<iframe src="currency.html"></iframe><p>
-</article>  
-<!--конец основного контента -->
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Homework 3</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
 
- </div>
-<footer>&copy; Leonid Kriukovskoi</footer>
+<body>
+<div id="wrap">
+<div id="header">
+<div id="logo"><img src="http://qdpro.com.ua/qdfiles//logo_1.png" alt="logo"></div>
+<div id="left_header"><time datetime="<дата и время>">Четверг, 10 марта 2016, 22:00</time><form name="search" action="#"><input type="search" placeholder="Поиск"><input type="image" src="images/search.jpg"></form></div>
+<div id="menu">
+<ul><li class="active"><a href="#">Главная</a></li>
+<li><a href="#">Программное обеспечение</a></li>
+<li><a href="#">Загрузка</a></li>
+<li><a href="#">Форум</a></li>
+<li><a href="#">Курсы валют</a></li>
+<li><a href="#">Партнеры</a></li>
+<li><a href="#">Контакты</a></li>
+</ul>
+</div>
+</div>
+<div id="leftblock">
+<div class="sideblock">
+<ul>
+<li class="blockname">Загрузка</li>
+<li><a href="#">Форум</a></li>
+<li><a href="#">Курсы валют</a></li>
+<li><a href="#">Партнеры</a></li>
+<li><a href="#">Контакты</a></li>
+</ul>
+</div>
+<div class="sideblock">
+<ul>
+<li class="blockname">Навигатов ВЭД</li>
+<li><a href="#">База документов</a></li>
+<li><a href="#">Каталог документов</a></li>
+<li><a href="#">Подборка документов</a></li>
+<li><a href="#">Украинская классификация товаров ВЭД</a></li>
+<li><a href="#">Классификационные решения ГТСУ</a></li>
+<li><a href="#">Средняя расчетная стоимость товаров согласно УКТВЭД</a></li>
+<li><a href="#">Справка по товару УКТВЭД</a></li>
+</ul>
+</div>
+<!--Форма регистрации -->
+<div class="sideblock">
+<div id="regist">
+<h5>Форма регистрации</h3>
+<label for="login">Имя пользователя</label><input type="text" id="login"><br>
+<label for="password">Пароль</label><input type="password" id="password"><br>
+<input type="checkbox">Запомнить меня<br>
+<button>Вход</button>
+</div>
+</div>
+
+</div>
+<section>
+<h1>Последние новости</h1>
+<article>
+<!-- Форма регистрации start -->
+<form action="#" name="reg">
+<div id="reg-left"><!-- блок с названиями полей-->
+<label for="name">Имя<br></label>
+<label for="lastname">Фамилия<br></label>
+<label for="email">E-mail<br></label>
+<label for="phone">Телефон<br></label>
+<label for="city">Город<br></label>
+<label for="password-reg">Пароль<br></label>
+<label for="password-repeat">Повторите пароль<br></label>
+<label for="comment">Дополнительная информация<br></label>
+</div>
+
+<div id="reg-right"><!-- блок с полями-->
+<input type="text" id="name"><br>
+<input type="text" id="lastname"><br>
+<input type="text" id="email"><br>
+<input type="text" id="phone"><br>
+<input type="text" id="city"><br>
+<input type="password" id="password-reg"><br>
+<input type="password" id="password-repeat"><br>
+<textarea rows="5" cols="30" id="comment"></textarea><br>
+<button id="reg-but">Зарегистрироваться</button>
+</div>
+</form>
+<!-- Форма регистрации end -->
+</article>
+</section>
+<div id="rightblock">
+<div class="sideblock">
+<table id="currency">
+  <caption>Официальные курсы гривны к иностранным валютам</caption>
+  <tr>
+  <th>Буквенный код</th>
+  <th>Название валюты</th>
+  <th>Кол. едениц</th>
+  <th>Официальный курс</th>
+   </tr>
+        <tr class="pop">
+  <td>GBP</td>
+  <td>Англійський фунт стерлингів</td>
+  <td>100</td>
+  <td>3690.2522</td>
+   </tr>
+        <tr class="pop">
+  <td>EUR</td>
+  <td>евро</td>
+  <td>100</td>
+  <td>2857.5468</td>
+   </tr>
+        <tr class="pop">
+  <td>USD</td>
+  <td>США долар</td>
+  <td>100</td>
+  <td>2621.3621</td>
+   </tr>
+   </table>
+   </div>
+   <div class="sideblock">
+<ul>
+<li class="blockname">Навигатов ВЭД</li>
+<li><a href="#">База документов</a></li>
+<li><a href="#">Каталог документов</a></li>
+<li><a href="#">Подборка документов</a></li>
+<li><a href="#">Украинская классификация товаров ВЭД</a></li>
+<li><a href="#">Классификационные решения ГТСУ</a></li>
+<li><a href="#">Средняя расчетная стоимость товаров согласно УКТВЭД</a></li>
+<li><a href="#">Справка по товару УКТВЭД</a></li>
+</ul>
+</div></div>
+<footer></footer>
+</div>
 </body>
 </html>
